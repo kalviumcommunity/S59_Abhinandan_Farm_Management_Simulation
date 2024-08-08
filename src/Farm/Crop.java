@@ -1,5 +1,6 @@
 package Farm;
 
+// use of classes can be seen here
 public class Crop {
     private String type;
     private String growthStage;

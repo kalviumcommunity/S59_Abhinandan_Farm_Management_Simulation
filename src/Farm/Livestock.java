@@ -1,5 +1,6 @@
 package Farm;
 
+//use of classes can be seen here
 public class Livestock {
     private String animal;
     private int healthLevel;
