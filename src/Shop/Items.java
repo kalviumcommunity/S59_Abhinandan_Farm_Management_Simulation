@@ -1,5 +1,6 @@
 package Shop;
 
+//use of classes can be seen here
 public class Items {
     private String item;
     private double price;

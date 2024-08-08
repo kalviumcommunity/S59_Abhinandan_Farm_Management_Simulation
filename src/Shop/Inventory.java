@@ -3,6 +3,7 @@ import java.util.*;
 
 import Shop.Items;
 
+// use of classes can be seen here
 public class Inventory {
     ArrayList<Items> items;
 

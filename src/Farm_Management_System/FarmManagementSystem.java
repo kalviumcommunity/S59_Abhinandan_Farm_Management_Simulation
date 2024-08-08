@@ -8,6 +8,7 @@ import Shop.Inventory;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//use of classes can be seen here
 public class FarmManagementSystem {
 
     private static void addCrops(ArrayList<Crop> crops, Scanner scanner) {
@@ -168,6 +169,8 @@ public class FarmManagementSystem {
             System.out.print("Enter your age: ");
             int age = scanner.nextInt();
             scanner.nextLine();
+
+//            use of objects can be seen here
             Farmer farmer = new Farmer(name, age);
             farmer.displayFarmerInfo();
 
