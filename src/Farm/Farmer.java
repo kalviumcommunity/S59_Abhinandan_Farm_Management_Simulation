@@ -1,13 +1,12 @@
 package Farm;
 
-//use of classes can be seen here
 public class Farmer {
     private String name;
     private int age;
 
     public Farmer(String name, int age) {
         this.name = name;
-        this.age = age;
+        this.age = age;    //use of this pointer can be seen here
     }
 
     public void setName(String name) {

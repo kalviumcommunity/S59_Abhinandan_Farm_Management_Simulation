@@ -9,7 +9,7 @@ public class Livestock {
 
     public Livestock(String animal) {
         this.animal = animal;;
-        this.healthLevel = 100;
+        this.healthLevel = 100;  //use of this pointer can be seen here
         this.age = 0;
         this.weight = 0;
     }
