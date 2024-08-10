@@ -9,7 +9,7 @@ public class Items {
     public Items(String item, double price, double quantity) {
         this.item = item;
         this.price = price;
-        this.quantity = quantity;
+        this.quantity = quantity;    //use of this pointer can be seen here
     }
 
     public String getName() {

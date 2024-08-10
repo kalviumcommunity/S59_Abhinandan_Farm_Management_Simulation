@@ -10,14 +10,14 @@ public class Crop {
     public Crop(String type, int initialWaterLevel) {
         this.type = type;
         this.growthStage = "Seedling";
-        this.waterLevel = initialWaterLevel;
+        this.waterLevel = initialWaterLevel;   //use of this pointer can be seen here
         this.description = "A generic crop.";
     }
 
     public Crop(String type, int initialWaterLevel, String description) {
         this.type = type;
         this.growthStage = "Seedling";
-        this.waterLevel = initialWaterLevel;
+        this.waterLevel = initialWaterLevel;    //use of this pointer can be seen here
         this.description = description;
     }
     public String getType() {
