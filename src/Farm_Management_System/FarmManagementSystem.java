@@ -135,14 +135,36 @@ public class FarmManagementSystem {
             System.out.println("Transaction cancelled.");
         }
     }
+//   made this harvest function to deallocate memory here the already present crops in the array
+    public static void harvest(ArrayList<Crop> crops, Scanner scanner) {
+        System.out.println("Crops available for harvesting:");
+        for(int i = 0; i < crops.size(); i++) {
+            Crop crop = crops.get(i);
+            if(crop != null) {
+                System.out.println(i + 1 + ". " + crop.getType());
+            }
+        }
+        System.out.print("Enter the number of the crop you want to harvest: ");
+        int index = scanner.nextInt();
+        scanner.nextLine();
+
+        if (index >= 0 && index < crops.size() && crops.get(index) != null)  {
+            crops.set(index, null);
+            System.out.println("Crop harvested successfully.");
+        }
+        else{
+            System.out.println("Invalid choice or Crop already harvested.");
+        }
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+//        usage of new keyword
         ArrayList<Crop> crops = new ArrayList<>();
         ArrayList<Livestock> livestock = new ArrayList<>();
         Inventory inventory = new Inventory();
 
+//        usage of the new keyword
         crops.add(new Crop("Wheat", 70));
         crops.add(new Crop("Corn", 75));
         livestock.add(new Livestock("Cow"));
@@ -185,7 +207,8 @@ public class FarmManagementSystem {
                 System.out.println("5. View Livestock Details");
                 System.out.println("6. Add Item to Inventory");
                 System.out.println("7. Buy Items");
-                System.out.println("8. Exit");
+                System.out.println("8. Harvest Crop");
+                System.out.println("9. Exit");
                 int farmerChoice = scanner.nextInt();
                 scanner.nextLine(); // Consume newline
 
@@ -212,6 +235,9 @@ public class FarmManagementSystem {
                         buyItems(inventory, scanner);
                         break;
                     case 8:
+                        harvest(crops, scanner);
+                        break;
+                    case 9:
                         exit = true;
                         break;
                     default:
