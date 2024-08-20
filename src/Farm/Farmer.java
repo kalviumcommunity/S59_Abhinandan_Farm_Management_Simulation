@@ -1,6 +1,5 @@
 package Farm;
 
-//use of classes can be seen here
 public class Farmer {
     private String name;
     private int age;
@@ -14,6 +13,7 @@ public class Farmer {
 
     public static int getFarmerCount() {
         return farmerCount;
+        this.age = age;    
     }
 
     public void setName(String name) {
