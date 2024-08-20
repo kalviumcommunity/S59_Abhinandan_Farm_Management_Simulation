@@ -6,6 +6,8 @@ import Shop.Items;
 // use of classes can be seen here
 public class Inventory {
     ArrayList<Items> items;
+    private static int totalItems = 0;
+
 
     public Inventory() {
         items = new ArrayList<>();
@@ -13,6 +15,11 @@ public class Inventory {
 
     public void addItem(Items item) {
         items.add(item);
+        totalItems++;
+    }
+
+    public static int getTotalItems() {
+        return totalItems;
     }
 
     public ArrayList<Items> getItems() {
