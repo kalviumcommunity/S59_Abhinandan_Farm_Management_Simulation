@@ -3,6 +3,7 @@ package Farm;
 public class Farmer {
     private String name;
     private int age;
+//    use of a static member variable
     private static int farmerCount;
 
     public Farmer(String name, int age) {
@@ -11,9 +12,9 @@ public class Farmer {
         farmerCount++;
     }
 
+//    use of a static member function
     public static int getFarmerCount() {
         return farmerCount;
-        this.age = age;    
     }
 
     public void setName(String name) {
