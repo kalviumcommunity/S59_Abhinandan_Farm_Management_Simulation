@@ -1,6 +1,6 @@
 package Farm;
 
-// use of classes can be seen here
+
 public class Crop {
     private String type;
     private String growthStage;
@@ -10,14 +10,14 @@ public class Crop {
     public Crop(String type, int initialWaterLevel) {
         this.type = type;
         this.growthStage = "Seedling";
-        this.waterLevel = initialWaterLevel;   //use of this pointer can be seen here
+        this.waterLevel = initialWaterLevel;
         this.description = "A generic crop.";
     }
 
     public Crop(String type, int initialWaterLevel, String description) {
         this.type = type;
         this.growthStage = "Seedling";
-        this.waterLevel = initialWaterLevel;    //use of this pointer can be seen here
+        this.waterLevel = initialWaterLevel;
         this.description = description;
     }
     public String getType() {
