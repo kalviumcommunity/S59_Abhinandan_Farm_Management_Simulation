@@ -8,7 +8,6 @@ import Shop.Inventory;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//use of classes can be seen here
 public class FarmManagementSystem {
 
     private static void addCrops(ArrayList<Crop> crops, Scanner scanner) {
@@ -28,6 +27,8 @@ public class FarmManagementSystem {
         }
         System.out.println("Crop added successfully.");
     }
+
+
 
     private static void addLivestock(ArrayList<Livestock> livestock, Scanner scanner) {
         System.out.print("Enter the type of livestock: ");
