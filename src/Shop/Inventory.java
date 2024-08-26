@@ -3,10 +3,8 @@ import java.util.*;
 
 import Shop.Items;
 
-// use of classes can be seen here
 public class Inventory {
     ArrayList<Items> items;
-//    use of a static member variable
     private static int totalItems = 0;
 
 
@@ -19,7 +17,6 @@ public class Inventory {
         totalItems++;
     }
 
-//    use of a static member function
     public static int getTotalItems() {
         return totalItems;
     }
