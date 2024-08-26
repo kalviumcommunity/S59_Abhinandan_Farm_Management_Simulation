@@ -1,31 +1,17 @@
 package Farm;
 
 
-public class Crop {
-    private String type;
+public class Crop extends AbstractCrop{
     private String growthStage;
-    private int waterLevel;
-    private String description;
 
     public Crop(String type, int initialWaterLevel) {
-        this.type = type;
+        super(type, initialWaterLevel, "A generic crop.");
         this.growthStage = "Seedling";
-        this.waterLevel = initialWaterLevel;
-        this.description = "A generic crop.";
     }
 
     public Crop(String type, int initialWaterLevel, String description) {
-        this.type = type;
+        super(type, initialWaterLevel, description);
         this.growthStage = "Seedling";
-        this.waterLevel = initialWaterLevel;
-        this.description = description;
-    }
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getGrowthStage() {
@@ -36,22 +22,7 @@ public class Crop {
         this.growthStage = growthStage;
     }
 
-    public int getWaterLevel() {
-        return waterLevel;
-    }
-
-    public void setWaterLevel(int waterLevel) {
-        this.waterLevel = waterLevel;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    @Override
     public void waterCrop(int amount) {
         if(this.waterLevel < 40) {
             this.waterLevel += amount;
@@ -62,6 +33,7 @@ public class Crop {
         }
     }
 
+    @Override
     public void displayInfo() {
         System.out.println("Crop Information:");
         System.out.println("Type: " + type);

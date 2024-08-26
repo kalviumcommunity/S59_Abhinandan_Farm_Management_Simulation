@@ -1,76 +1,35 @@
 package Farm;
 
-public class Livestock {
-    private String animal;
-    private int healthLevel;
-    private int age;
-    private int weight;
+public class Livestock extends AbstractLiveStock {
 
     public Livestock(String animal) {
-        this.animal = animal;;
-        this.healthLevel = 100;  //use of this pointer can be seen here
-        this.age = 0;
-        this.weight = 0;
+        super(animal);
     }
-
-    public String getAnimal() {
-        return animal;
-    }
-
-    public void setAnimal(String animalName) {
-        this.animal = animalName;
-    }
-
-    public int getHealthLevel() {
-        return healthLevel;
-    }
-
-    public void setHealthLevel(int healthLevel) {
-        if(this.healthLevel > 100) {
-            this.healthLevel = 100;
+    @Override
+    public void feedAnimal(int amount) {
+        setHealthLevel(getHealthLevel() + amount);
+        if (getHealthLevel() > 100) {
+            setHealthLevel(100);
         }
-        else if (healthLevel < 0) {
-            this.healthLevel = 0;
-        }
-        else {
-            this.healthLevel = healthLevel;
-        }
+        setWeight(getWeight() + amount / 10);
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void FeedAnimal(int amount) {
-        this.healthLevel += amount;
-        if (this.healthLevel > 100) {
-            this.healthLevel = 100;
-        }
-        this.weight += amount / 10;
-    }
-
+    @Override
     public void ageLivestock() {
-        this.age++;
-        this.healthLevel -= 5; // Health decreases with age
-        if (this.healthLevel < 0) {
-            this.healthLevel = 0;
+        setAge(getAge() + 1);
+        setHealthLevel(getHealthLevel() - 5);
+        if (getHealthLevel() < 0) {
+            setHealthLevel(0);
         }
     }
 
+    @Override
     public void displayInfo() {
         System.out.println("Livestock Information:");
-        System.out.println("Animal: " + animal);
-        System.out.println("Health Level: " + healthLevel);
-        System.out.println("Age: " + age);
-        System.out.println("Weight: " + weight);
+        System.out.println("Animal: " + getAnimal());
+        System.out.println("Health Level: " + getHealthLevel());
+        System.out.println("Age: " + getAge());
+        System.out.println("Weight: " + getWeight());
     }
 }
 
