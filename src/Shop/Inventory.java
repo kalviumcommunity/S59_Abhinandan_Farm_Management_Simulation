@@ -4,6 +4,12 @@ import java.util.*;
 import Shop.Items;
 
 public class Inventory {
+
+//    default constructor
+    public Inventory() {
+        items = new ArrayList<>();
+    }
+
     ArrayList<Items> items;
     private static int totalItems = 0;
 

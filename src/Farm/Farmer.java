@@ -8,6 +8,13 @@
         private static int farmerCount;
 
 
+//        Parameterised constructor
+        public Farmer(String name, int age) {
+            this.name = name;
+            this.age = age;
+            farmerCount++;
+        }
+
         public static int getFarmerCount() {
             return farmerCount;
         }
