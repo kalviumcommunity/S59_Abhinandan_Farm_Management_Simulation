@@ -8,10 +8,6 @@ public class Inventory {
     private static int totalItems = 0;
 
 
-    public Inventory() {
-        items = new ArrayList<>();
-    }
-
     public void addItem(Items item) {
         items.add(item);
         totalItems++;
