@@ -22,6 +22,7 @@ public class Crop extends AbstractCrop{
         this.growthStage = growthStage;
     }
 
+//    Method overloading  -- polymorphism example
     @Override
     public void waterCrop(int amount) {
         if(this.waterLevel < 40) {
@@ -33,6 +34,7 @@ public class Crop extends AbstractCrop{
         }
     }
 
+//    Method overloading has been used here
     @Override
     public void displayInfo() {
         System.out.println("Crop Information:");
