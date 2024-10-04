@@ -1,4 +1,6 @@
-    // use of encapsulation
+
+//    Use of single responsibility can be seen here
+//    src/Farm/Farmer.java
 
     package Farm;
 
@@ -8,7 +10,6 @@
         private static int farmerCount;
 
 
-//        Parameterised constructor
         public Farmer(String name, int age) {
             this.name = name;
             this.age = age;
@@ -42,3 +43,5 @@
         }
 
     };
+
+//    USE OF SRP
