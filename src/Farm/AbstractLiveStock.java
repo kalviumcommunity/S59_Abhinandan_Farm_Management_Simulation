@@ -1,5 +1,6 @@
 package Farm;
-
+//     USE OF Open / CLosed Principle can be seen here
+//     src/Farm/AbstractLiveStock.java
 public abstract class AbstractLiveStock {
     protected String animal;
     protected int healthLevel;
@@ -48,3 +49,6 @@ public abstract class AbstractLiveStock {
     public abstract void ageLivestock();
     public abstract void displayInfo();
 }
+
+
+//USE OF OCP
