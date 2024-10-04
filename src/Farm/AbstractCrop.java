@@ -1,5 +1,6 @@
 package Farm;
-
+//     USE OF Open / CLosed Principle can be seen here
+//     src/Farm/AbstractLiveStock.java
 public abstract class AbstractCrop {
     protected String type;
     protected int waterLevel;
@@ -38,3 +39,6 @@ public abstract class AbstractCrop {
     public abstract void waterCrop(int amount);
     public abstract void displayInfo();
 }
+
+
+//USE OF OCP
