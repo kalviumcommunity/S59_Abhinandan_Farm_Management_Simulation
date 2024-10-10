@@ -1,6 +1,9 @@
 package Farm;
 
 public class Livestock extends AbstractLiveStock {
+    //Livestock class can effectively replace AbstractLiveStock class
+    //this class has all the methods and members present in its parent class
+    //As per LSP, any subclass should be able to replace its superclass
 
     public Livestock(String animal) {
         super(animal);
